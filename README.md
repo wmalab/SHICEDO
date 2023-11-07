@@ -25,6 +25,7 @@ To activate this environment, use<br>
 ## Download processed data
 The processed data is available at the following link:<br>
 [Download processed data](https://drive.google.com/drive/folders/1EgkzPoNG-s_pi3SKOFG_YFslpIar_Bht?usp=sharing).<br>
+There are two processed data available, in the following example, we will demo with processed Lee et al. dataset in folder Lee <br>
 1. `mkdir data`<br>
 2. Please download the processed data to the data folder and use the correct path in the script for data loading.<br>
 If you wish to preprocess other datasets. Please check the data preprocessing section
