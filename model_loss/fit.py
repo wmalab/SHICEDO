@@ -3,9 +3,6 @@ import torch
 import numpy as np
 from model_loss import model, Loss_functions
 import random
-import matplotlib.pyplot as plt
-from torch.utils.tensorboard import SummaryWriter
-
 
 # Seed Setting
 seed = 43
@@ -84,22 +81,11 @@ def run_fit(config, gen, dis, train_data, vali_data, epochs, len_high_size, scal
             Dis_loss.append(dis_loss.cpu().detach().numpy())
         
         train_matrix_loss = np.nanmean(G_ssim_h)+np.nanmean(G_mse_h)+np.nanmean(G_feature)
-        print('train_matrix_loss: ',train_matrix_loss)
-        writer = SummaryWriter('runs/train_vali_loss')
-        writer.add_scalar("training G_ssim_h", np.nanmean(G_ssim_h), epoch)
-        writer.add_scalar("training G_mse_h", np.nanmean(G_mse_h), epoch)    
-        writer.add_scalar("training G_feature", np.nanmean(G_feature), epoch)   
-        writer.add_scalar("training matrix loss", np.nanmean(train_matrix_loss), epoch)
-        
+        print('Matrix training loss: ',train_matrix_loss)
+
         # Validation Loop
         avg_val_mse_loss, avg_val_feature_loss, avg_val_SSIM_loss = validate_model(vali_data, gen, dis, config, len_high_size, regular_filter, large_filter, device)
         vali_matrix_loss = avg_val_mse_loss+avg_val_feature_loss+avg_val_SSIM_loss
-        print('vali_matrix_loss: ',vali_matrix_loss)
-        writer.add_scalar("vali_mse_loss", avg_val_mse_loss, epoch)
-        writer.add_scalar("vali_feature_loss", avg_val_feature_loss, epoch)
-        writer.add_scalar("vali_SSIM_loss", avg_val_SSIM_loss, epoch)
-        writer.add_scalar("vali_matrix_loss", vali_matrix_loss, epoch)
-        writer.close()
         
         os.makedirs("trained_model", exist_ok=True)
         if epoch == 0:
