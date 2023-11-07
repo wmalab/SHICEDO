@@ -8,6 +8,7 @@ In this work, we introduce SHICEDO, a novel deep-learning model specifically des
   - [Download processed data](#Download-processed-data)
   - [Training](#Training)
   - [Prediction](#Prediction)
+  - [Prediction with pre-trained model](#Prediction-with-pre-trained-model)
   - [Evaluation](#Evaluation)
   - [Data preprocessing](#Data-preprocessing)
   - [Heatmap and loss visualization](#Heatmap-and-loss-visualization)
@@ -24,7 +25,8 @@ To activate this environment, use<br>
 ## Download processed data
 The processed data is available at the following link:<br>
 [Download processed data](https://drive.google.com/drive/folders/1EgkzPoNG-s_pi3SKOFG_YFslpIar_Bht?usp=sharing).<br>
-Please download the processed data to the data folder and use the correct path in the script for data loading.<br>
+1. `mkdir data`<br>
+2. Please download the processed data to the data folder and use the correct path in the script for data loading.<br>
 If you wish to preprocess other datasets. Please check the data preprocessing section
 
 ## Data preprocessing
@@ -52,13 +54,18 @@ After training, Enhanced scHi-C can predict with the following command:<br>
 Users can also use the provided pre-trained model to make predictions. <br>
 Please change the corresponding model loading path in the test_prediction.py file.<br>
 
+## Prediction with pre-trained model
+Users can use the provided pre-trained model to make the prediction:<br>
+1. `mkdir pretrained_model`<br>
+2. Please download the pretrained model to the pretrained_model folder and use the correct path in the script [Download pre-trained model](https://drive.google.com/drive/folders/1URpt1Ro1MZhUh-ECdEQFLx0iunlA7K7B?usp=sharing).<br>
+3. `python test_pretrained_prediction.py`<br>
+
 ## Evaluation
 After prediction, users can generate the MSE and macro F1 of low resolution and prediction by running the following command:<br>
 `python test_evaluation.py` 
 
 ## Heatmap and loss visualization   
 If you wish to check the heatmap of low resolution, prediction, and true scHi-C, please run the following command:<br>
-`tensorboard --logdir=runs/train_vali_loss` <br>
 `tensorboard --logdir=runs/heatmap` <br>
 
 # Demo
