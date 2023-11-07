@@ -45,7 +45,7 @@ data_preprocessing.sh will run 6 scripts to save processed data: <br>
 6. Divide large matrixes into submatrices and save as torch tensor `python generate_input.py`<br>
 
 ## Training
-We provide two groups of hyper-parameters (in test_train.py) for two processed datasets [Download processed data](https://drive.google.com/drive/folders/1EgkzPoNG-s_pi3SKOFG_YFslpIar_Bht?usp=sharing).<br>
+For optimal performance when training on new data, parameter fine-tuning is essential.<br>
 The model and date setting were the same as described in the paper.  <br>
 After choosing suitable hyper-parameters, the model can be trained with the following command: <br>
 `python test_train.py` <br>
