@@ -47,7 +47,7 @@ def Run_separate_by_stage(selected_filename,root_path):
     return stage1,stage2,stage3,stage4
 
 if __name__ == '__main__':
-    root_path=os.getcwd()
+    root_path=os.getcwd()+'/'
     cell_contact_threshold_num = 310000 #250000
     resolution='1mb'
     filename = root_path+"process_data/Nagano/filename"
