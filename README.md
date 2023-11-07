@@ -8,6 +8,7 @@ In this work, we introduce SHICEDO, a novel deep-learning model specifically des
   - [Download processed data](#Download-processed-data)
   - [Training](#Training)
   - [Prediction](#Prediction)
+  - [Prediction with pre-trained model](#Prediction with pre-trained model)
   - [Evaluation](#Evaluation)
   - [Data preprocessing](#Data-preprocessing)
   - [Heatmap and loss visualization](#Heatmap-and-loss-visualization)
