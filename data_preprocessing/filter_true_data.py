@@ -70,8 +70,8 @@ if __name__ == '__main__':
     stage2_true_cells_file = sorted(glob.glob("process_data/Nagano_process/"+resolution+"_con"+contact_threshold+"/filter_true/stage2/*"))
     stage3_true_cells_file = sorted(glob.glob("process_data/Nagano_process/"+resolution+"_con"+contact_threshold+"/filter_true/stage3/*"))
     stage4_true_cells_file = sorted(glob.glob("process_data/Nagano_process/"+resolution+"_con"+contact_threshold+"/filter_true/stage4/*"))
-    # stage_list = [stage1_true_cells_file,stage2_true_cells_file,stage3_true_cells_file,stage4_true_cells_file]
-    stage_list = [stage1_true_cells_file[0:2],stage2_true_cells_file[0:2],stage3_true_cells_file[0:2],stage4_true_cells_file[0:2]]
+    stage_list = [stage1_true_cells_file,stage2_true_cells_file,stage3_true_cells_file,stage4_true_cells_file]
+    # stage_list = [stage1_true_cells_file[0:2],stage2_true_cells_file[0:2],stage3_true_cells_file[0:2],stage4_true_cells_file[0:2]]
     for stage in range(len(stage_list)):
     # for i, stage in enumerate(stage_list):
         process_HiC(stage_list[stage],matrix_resolution, stage+1,resolution,contact_threshold)
