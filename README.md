@@ -71,11 +71,10 @@ If you wish to check the heatmap of low resolution, prediction, and true scHi-C,
 `tensorboard --logdir=runs/heatmap` <br>
 
 # Demo
-Here we used processed Nagano et al. (download from [Download processed data](https://drive.google.com/drive/folders/1EgkzPoNG-s_pi3SKOFG_YFslpIar_Bht?usp=sharing)) to demo the training, prediction and evaluation process:<br>
+Here we used processed Lee et al. (download from [Download processed data](https://drive.google.com/drive/folders/1EgkzPoNG-s_pi3SKOFG_YFslpIar_Bht?usp=sharing)) to demo the training, prediction and evaluation process:<br>
 `>> conda activate SHICEDO` <br>
 `> python test_train.py`<br>
 `> python test_prediction.py`<br>
 `> python test_evaluation.py`<br>
 For heatmap and loss visitation: <br>
-`tensorboard --logdir=runs/train_vali_loss` <br>
 `tensorboard --logdir=runs/heatmap` 
