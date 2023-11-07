@@ -8,7 +8,7 @@ In this work, we introduce SHICEDO, a novel deep-learning model specifically des
   - [Download processed data](#Download-processed-data)
   - [Training](#Training)
   - [Prediction](#Prediction)
-  - [Prediction with pre-trained model](#Prediction with pre-trained model)
+  - [Prediction with pre-trained model](#Prediction-with-pre-trained-model)
   - [Evaluation](#Evaluation)
   - [Data preprocessing](#Data-preprocessing)
   - [Heatmap and loss visualization](#Heatmap-and-loss-visualization)
@@ -57,11 +57,8 @@ Please change the corresponding model loading path in the test_prediction.py fil
 ## Prediction with pre-trained model
 Users can use the provided pre-trained model to make the prediction:<br>
 1. `mkdir pretrained_model`<br>
-2. [Download pre-trained model](https://drive.google.com/drive/folders/1URpt1Ro1MZhUh-ECdEQFLx0iunlA7K7B?usp=sharing).<br>
+2. Please download the pretrained model to the pretrained_model folder and use the correct path in the script [Download pre-trained model](https://drive.google.com/drive/folders/1URpt1Ro1MZhUh-ECdEQFLx0iunlA7K7B?usp=sharing).<br>
 3. `python test_pretrained_prediction.py`<br>
-
-
-https://drive.google.com/drive/folders/1URpt1Ro1MZhUh-ECdEQFLx0iunlA7K7B?usp=sharing
 
 ## Evaluation
 After prediction, users can generate the MSE and macro F1 of low resolution and prediction by running the following command:<br>
