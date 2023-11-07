@@ -110,8 +110,8 @@ if __name__ == '__main__':
     matrix_resolution = 1000000
     resolution='1mb'
     cell_contact_threshold_num = '310000'
-    # stage_list = [stage1_filename,stage2_filename,stage3_filename,stage4_filename]
-    stage_list = [stage1_filename[0:2],stage2_filename[0:2],stage3_filename[0:2],stage4_filename[0:2]]
+    stage_list = [stage1_filename,stage2_filename,stage3_filename,stage4_filename]
+    # stage_list = [stage1_filename[0:2],stage2_filename[0:2],stage3_filename[0:2],stage4_filename[0:2]]
     total_Mh_count=0
     total_Ml_count=0
     for stage in range(len(stage_list)):
