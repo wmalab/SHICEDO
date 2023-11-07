@@ -92,7 +92,7 @@ if __name__ == '__main__':
     config = {
         "len_size": 40,
         "root_dir": os.getcwd(),
-        "data_dir": '/data/Nagano/1mb/9/',
+        "data_dir": '/data/Lee/1mb/16/',
         "scale_num": [0, 1],
         "gen_rank1_1st": 786,
         "dis_rank1_1st": 256,
