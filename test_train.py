@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
     config = {
     "root_path": os.getcwd(),
-    "file_path": '/data/Lee/1mb/9/',
+    "file_path": '/data/Lee/1mb/16/',
     "scale_list": [0,1],
     "len_size":40,
     "EPOCHS":100,
