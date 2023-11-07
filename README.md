@@ -66,7 +66,6 @@ After prediction, users can generate the MSE and macro F1 of low resolution and 
 
 ## Heatmap and loss visualization   
 If you wish to check the heatmap of low resolution, prediction, and true scHi-C, please run the following command:<br>
-`tensorboard --logdir=runs/train_vali_loss` <br>
 `tensorboard --logdir=runs/heatmap` <br>
 
 # Demo
