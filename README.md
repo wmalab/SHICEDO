@@ -25,6 +25,8 @@ To activate this environment, use<br>
 ## Download processed data
 The processed data is available at the following link:<br>
 [Download processed data](https://drive.google.com/drive/folders/1EgkzPoNG-s_pi3SKOFG_YFslpIar_Bht?usp=sharing).<br>
+There are two processed data available, in the following example, we will demo with processed Lee et al. dataset in folder Lee <br>
+The downloaded data may be compressed in different files, please move the files into one folder after Extract <br>
 1. `mkdir data`<br>
 2. Please download the processed data to the data folder and use the correct path in the script for data loading.<br>
 If you wish to preprocess other datasets. Please check the data preprocessing section
@@ -43,7 +45,7 @@ data_preprocessing.sh will run 6 scripts to save processed data: <br>
 6. Divide large matrixes into submatrices and save as torch tensor `python generate_input.py`<br>
 
 ## Training
-We provide two groups of hyper-parameters (in test_train.py) for two processed datasets [Download processed data](https://drive.google.com/drive/folders/1EgkzPoNG-s_pi3SKOFG_YFslpIar_Bht?usp=sharing).<br>
+For optimal performance when training on new data, parameter fine-tuning is essential.<br>
 The model and date setting were the same as described in the paper.  <br>
 After choosing suitable hyper-parameters, the model can be trained with the following command: <br>
 `python test_train.py` <br>
