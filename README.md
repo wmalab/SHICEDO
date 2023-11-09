@@ -43,6 +43,7 @@ data_preprocessing.sh will run 6 scripts to save processed data: <br>
 2. Filter out the inter-chromosomal interactions `python filter_true_data.py`<br>
 3. Downsampling the matrix to generate low-resolution input `python down_sampling_sciHiC.py`<br>
 4. Run Rscrip to do Bandnorm `Rscript bandnorm.R`<br>
+   (Please follow the instruction to install Bandnorm [Bandnorm]([https://drive.google.com/drive/folders/1UihcMw9DNR35Wps6FKVw-5EbiR7Tw55u?usp=sharing](https://sshen82.github.io/BandNorm/index.html)))<br>
 5. Organize normalized result `python run_bandnorm.py`<br>
 6. Divide large matrixes into submatrices and save as torch tensor `python generate_input.py`<br>
 
