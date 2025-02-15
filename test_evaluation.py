@@ -47,11 +47,11 @@ def run_mae(Hr_pred_HiC, Hr_true_HiC):
                 true = np.multiply(loss_filter,Hr_true_HiC[key])
                 key=(key[0],key[1],key[2])
                 pred = np.multiply(loss_filter,Hr_pred_HiC[key])
-            pred_vector=extract_dig(pred)
-            true_vector=extract_dig(true)
-            mae = mae_l1(torch.tensor(pred_vector), torch.tensor(true_vector))
-            MAE += mae
-            count +=1
+                pred_vector=extract_dig(pred)
+                true_vector=extract_dig(true)
+                mae = mae_l1(torch.tensor(pred_vector), torch.tensor(true_vector))
+                MAE += mae
+                count +=1
     MAE_avg = float(MAE/count)
     return MAE_avg
 
@@ -70,12 +70,12 @@ def run_f1_score(Hr_pred_HiC, Hr_true_HiC):
                 HR_m = torch.tensor(np.multiply(loss_filter,Hr_true_HiC[key]))
                 key=(key[0],key[1],key[2])
                 pred_m = torch.tensor(np.multiply(loss_filter,Hr_pred_HiC[key]))
-            HR_m = torch.where(HR_m > threshold, torch.ones_like(HR_m), torch.zeros_like(HR_m))
-            pred_m = torch.where(pred_m > threshold, torch.ones_like(pred_m), torch.zeros_like(pred_m))
-            pred_vector=extract_dig(pred_m)
-            true_vector=extract_dig(HR_m)
-            f1 = metrics.f1_score(true_vector, pred_vector, average='macro') 
-            F1.append(f1)
+                HR_m = torch.where(HR_m > threshold, torch.ones_like(HR_m), torch.zeros_like(HR_m))
+                pred_m = torch.where(pred_m > threshold, torch.ones_like(pred_m), torch.zeros_like(pred_m))
+                pred_vector=extract_dig(pred_m)
+                true_vector=extract_dig(HR_m)
+                f1 = metrics.f1_score(true_vector, pred_vector, average='macro') 
+                F1.append(f1)
     F1_avg = np.nanmean(F1)
     return F1_avg
 
