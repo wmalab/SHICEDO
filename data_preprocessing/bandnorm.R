@@ -10,10 +10,6 @@ library(Gviz, lib.loc = "/bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_6
 library(MatrixGenerics, lib.loc = "/bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/R/4.2.2/lib64/R/library")
 library(BandNorm)
 
-
-
-
-
 # norm low resolution data
 Path <- "process_data/Nagano_process/1mb_con310000/ds_9/stage1"
 bandnorm_result_test22 = bandnorm(path = Path, save = FALSE)
@@ -31,8 +27,6 @@ Path <- "process_data/Nagano_process/1mb_con310000/ds_9/stage4"
 bandnorm_result_test22 = bandnorm(path = Path, save = FALSE)
 write.table(bandnorm_result_test22,"process_data/Nagano_process/1mb_con310000/ds_9/norm/stage4.txt",sep="\t",row.names=FALSE)
 
-
-
 # norm true data
 Path <- "process_data/Nagano_process/1mb_con310000/filter_true_no_inter/stage1"
 bandnorm_result_test22 = bandnorm(path = Path, save = FALSE)
@@ -42,36 +36,13 @@ Path <- "process_data/Nagano_process/1mb_con310000/filter_true_no_inter/stage2"
 bandnorm_result_test22 = bandnorm(path = Path, save = FALSE)
 write.table(bandnorm_result_test22,"process_data/Nagano_process/1mb_con310000/filter_true_no_inter/filter_true_no_inter_norm/stage2.txt",sep="\t",row.names=FALSE)
 
-
 Path <- "process_data/Nagano_process/1mb_con310000/filter_true_no_inter/stage3"
 bandnorm_result_test22 = bandnorm(path = Path, save = FALSE)
 write.table(bandnorm_result_test22,"process_data/Nagano_process/1mb_con310000/filter_true_no_inter/filter_true_no_inter_norm/stage3.txt",sep="\t",row.names=FALSE)
 
-
 Path <- "process_data/Nagano_process/1mb_con310000/filter_true_no_inter/stage4"
 bandnorm_result_test22 = bandnorm(path = Path, save = FALSE)
 write.table(bandnorm_result_test22,"process_data/Nagano_process/1mb_con310000/filter_true_no_inter/filter_true_no_inter_norm/stage4.txt",sep="\t",row.names=FALSE)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # library(Gviz, lib.loc = "/bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/R/4.2.0/lib64/R/library")
 # library(BandNorm)
@@ -95,7 +66,3 @@ write.table(bandnorm_result_test22,"process_data/Nagano_process/1mb_con310000/fi
 # #Path <- "cooldata"
 # #bandnorm_result_test22 = bandnorm_cooler(coolerPath = Path,resolution=10000 )
 # #print(bandnorm_result_test22)
-
-
-
-

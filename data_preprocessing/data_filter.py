@@ -97,5 +97,4 @@ if __name__ == '__main__':
     for i in range(len(stage4)):
         temp=stage4[i].replace('single_cell', 'process_data')
         shutil.copyfile(temp, filter_stage4_folders[i])
-    
     print('Finished data filtering! ')

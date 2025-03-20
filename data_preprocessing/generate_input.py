@@ -213,7 +213,6 @@ def Run_prepare_data(stage,scale_num,block_size, train_div_dic, vali_div_dic, te
     save_tensor_path = path +'/'+'test_true_img.pt'
     torch.save(test_true_img, save_tensor_path)
 
-
 if __name__ == '__main__':
     stage_list = ['stage1','stage2','stage3','stage4']
     resolution_filename = '1mb'

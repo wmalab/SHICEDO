@@ -76,5 +76,4 @@ if __name__ == '__main__':
     # for i, stage in enumerate(stage_list):
         process_HiC(stage_list[stage],matrix_resolution, stage+1,resolution,contact_threshold)
         save_scihic_list(matrix_resolution,stage+1,resolution,contact_threshold)
-
     print('\n Finished filter out the inter-chromosomal interactions! ')

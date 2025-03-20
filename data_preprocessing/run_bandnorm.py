@@ -2,11 +2,9 @@ import pandas as pd
 import numpy as np
 import glob
 import os
-
 resolution="1mb"
 contact_threshold = "310000"
 stage_list=["stage1","stage2","stage3","stage4"]
-
 for stage in stage_list:
     print('start change Low resolution list')
     df = pd.read_csv("process_data/Nagano_process/"+resolution+"_con"+contact_threshold+"/ds_9/norm/"+stage+".txt", sep="\t")
@@ -24,7 +22,7 @@ for stage in stage_list:
             os.makedirs(path)  
         np.savetxt(path+temp_name, temp_df.values,fmt="%s")
     print('finished process Low resolution norm !!!')
-    
+
 for stage in stage_list:
     print('start change true list')
     df = pd.read_csv("process_data/Nagano_process/"+resolution+"_con"+contact_threshold+"/filter_true_no_inter/filter_true_no_inter_norm/"+stage+".txt", sep="\t")

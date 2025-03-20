@@ -85,7 +85,6 @@ def Combine_tensor(path):
     isExist = os.path.exists(path)
     if not isExist:
         os.makedirs(path)  
-
     save_tensor_path = path +'/'+'train_index.pt'
     torch.save(train_index, save_tensor_path)
     save_tensor_path = path +'/'+'train_large_img.pt'
@@ -112,4 +111,3 @@ def Combine_tensor(path):
     torch.save(test_regular_img, save_tensor_path)
     save_tensor_path = path +'/'+'test_true_img.pt'
     torch.save(test_True_img, save_tensor_path)
-

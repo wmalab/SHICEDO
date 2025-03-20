@@ -124,9 +124,3 @@ if __name__ == '__main__':
     print('average cell count mh: ',total_Mh_count/(len(stage1_filename)+len(stage2_filename)+len(stage3_filename)+len(stage4_filename)))
     print('average cell count ml: ',total_Ml_count/(len(stage1_filename)+len(stage2_filename)+len(stage3_filename)+len(stage4_filename)))
     print('Finished downsampling! ')
-    
-    
-    
-    
-    
-    
