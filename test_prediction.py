@@ -7,7 +7,6 @@ from torch.utils.data import TensorDataset, DataLoader
 from model_loss import model, fit
 import gc
 
-
 # Set seed for reproducibility
 def set_seed(seed=43):
     torch.manual_seed(seed)
@@ -15,7 +14,6 @@ def set_seed(seed=43):
     np.random.seed(seed)
     random.seed(seed)
     torch.backends.cudnn.benchmark = False
-
 set_seed()
 
 def make_loss_filter(len_size, batch_size=None, device=None):
@@ -36,7 +34,6 @@ def predict(model_path, ds, config):
     model_state, optimizer_state = torch.load(gan_model_weights_path)
     Generator.load_state_dict(model_state)
     Generator.to(device).float()
-    
     batch_size = config["BATCH_SIZE"]
     regular_filter = make_loss_filter(config["len_size"], batch_size, device)
     large_filter = make_loss_filter(config["len_size"] + 4, batch_size, device)
@@ -87,7 +84,6 @@ def run(model_path=None, config=None):
             pickle.dump(dic, handle)
     return Lr_dic, predict_hic_dic, true_dic
 
-
 if __name__ == '__main__':
     config = {
         "len_size": 40,
@@ -109,6 +105,4 @@ if __name__ == '__main__':
         "G_loss_w_gfeature": 0.5,
         "G_loss_w_fm": 1.0,
     }
-
     Lr_HiC, Hr_pred_HiC, Hr_true_HiC = run(model_path=os.path.join(config["root_dir"], 'trained_model', 'gen_checkpoint.pt'),config=config)
-

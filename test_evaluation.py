@@ -15,7 +15,6 @@ def set_seed(seed=43):
     np.random.seed(seed)
     random.seed(seed)
     torch.backends.cudnn.benchmark = False
-
 set_seed()
 
 def make_2M_filter(len_high_size):
@@ -88,7 +87,6 @@ if __name__ == '__main__':
         Hr_pred_HiC = pickle.load(file)
     with open(path+'/output/test_true_dic.pickle', 'rb') as file:
         Hr_true_HiC = pickle.load(file)
-        
 
     Lr_MAE_avg = run_mae(Lr_HiC, Hr_true_HiC)
     print('Low resolution average MAE: ',Lr_MAE_avg)
@@ -99,7 +97,6 @@ if __name__ == '__main__':
     print('Low resolution average macro F1: ',Lr_F1_avg)
     pred_F1_avg = run_f1_score(Hr_pred_HiC, Hr_true_HiC)
     print('Prediction average macro F1: ',pred_F1_avg)
-
     
     key_list=list(Lr_HiC.keys())
     for i in range(len(key_list)):
@@ -125,8 +122,3 @@ if __name__ == '__main__':
         with SummaryWriter('runs/heatmap') as writer:
             writer.add_figure('Lr Pred true {}'.format(sample_num), plt.gcf(), global_step=sample_num)
             writer.close()
-    
-    
-
-
-        

@@ -5,8 +5,6 @@ import torch
 from torch.utils.data import TensorDataset, DataLoader
 from model_loss import fit,model
 
-
-
 seed = 43
 torch.manual_seed(seed)
 torch.cuda.manual_seed(seed)
@@ -14,7 +12,6 @@ torch.cuda.manual_seed_all(seed)
 np.random.seed(seed)
 random.seed(seed)
 torch.backends.cudnn.benchmark = False
-
 
 def load_data(file_path,BATCH_SIZE):
     path = file_path +'train_large_img.pt'
@@ -35,7 +32,6 @@ def load_data(file_path,BATCH_SIZE):
     vali_allstage_data = DataLoader(vali_dataset,batch_size=BATCH_SIZE,shuffle=True) 
     return train_allstage_data, vali_allstage_data
 
-
 def train(config):
     resuming_training = False
     load_epoch = None
@@ -45,10 +41,7 @@ def train(config):
     Dis = model.make_discriminator(config=config,len_high_size=config["len_size"])
     fit.run_fit(config,Gen, Dis, train_data,vali_data, config["EPOCHS"], config["len_size"], config["scale_list"])
 
-
 if __name__ == '__main__':
-
-
     config = {
     "root_path": os.getcwd(),
     "file_path": '/data/Lee/1mb/16/',
@@ -66,8 +59,4 @@ if __name__ == '__main__':
     "gen_se_reduction2":4,
     "weight_list":[0.01, 0.01, 0.4, 1.0, 0.2],
     }
-    
     train(config)
-
-
-

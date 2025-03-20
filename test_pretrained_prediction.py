@@ -7,7 +7,6 @@ from torch.utils.data import TensorDataset, DataLoader
 from model_loss import model, fit
 import gc
 
-
 # Set seed for reproducibility
 def set_seed(seed=43):
     torch.manual_seed(seed)
@@ -35,7 +34,6 @@ def predict(model_path, ds, config):
     model_state, optimizer_state = torch.load(model_path)
     Generator.load_state_dict(model_state)
     Generator.to(device).float()
-    
     batch_size = config["BATCH_SIZE"]
     regular_filter = make_loss_filter(config["len_size"], batch_size, device)
     large_filter = make_loss_filter(config["len_size"] + 4, batch_size, device)
@@ -43,7 +41,6 @@ def predict(model_path, ds, config):
     for i, (index,large_img,regular_img,True_img) in enumerate(ds):
         if i % 10000 == 0:
                 print('pred sample: ',i)
-        
         large_img, regular_img, True_img = [img.float().to(device) for img in [large_img, regular_img, True_img]]
         if regular_img.shape[0] != regular_filter.shape[0]:
             temp_regular_filter = make_loss_filter(config["len_size"], regular_img.shape[0], device)
@@ -86,7 +83,6 @@ def run(model_path=None, config=None):
             pickle.dump(dic, handle)
     return Lr_dic, predict_hic_dic, true_dic
 
-
 if __name__ == '__main__':
     config = {
         "len_size": 40,
@@ -108,6 +104,4 @@ if __name__ == '__main__':
         "G_loss_w_gfeature": 0.5,
         "G_loss_w_fm": 1.0,
     }
-
     Lr_HiC, Hr_pred_HiC, Hr_true_HiC = run(model_path=os.path.join(config["root_dir"], 'pretrained_model', 'gen_checkpoint.pt'),config=config)
-
