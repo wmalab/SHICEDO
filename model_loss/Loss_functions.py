@@ -5,7 +5,6 @@ import numpy as np
 from torchvision import models
 from torchmetrics import StructuralSimilarityIndexMeasure
 from model_loss.autoencoder import ConvAutoencoder
-
 # Seed
 seed = 43
 torch.manual_seed(seed)

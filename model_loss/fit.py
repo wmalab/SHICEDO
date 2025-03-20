@@ -3,7 +3,6 @@ import torch
 import numpy as np
 from model_loss import model, Loss_functions
 import random
-
 # Seed Setting
 seed = 43
 torch.manual_seed(seed)
