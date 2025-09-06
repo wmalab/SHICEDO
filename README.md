@@ -1,5 +1,5 @@
 # SHICEDO: Single-cell Hi-C Resolution Enhancement with Reduced Over-smoothing
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17069264.svg)](https://doi.org/10.5281/zenodo.17069264)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17069264.svg)](https://doi.org/10.5281/zenodo.17069264)<br>
 In this work, we introduce SHICEDO, a novel deep-learning model specifically designed for enhancing scHi-C resolution while addressing the over-smoothing issue. Built on a generative adversarial network (GAN) framework, SHICEDO's generator can process low-resolution scHi-C input of varying scales and sizes, generating an enhanced scHi-C matrix as the output. Leveraging our prior work on bulk Hi-C data, EnHiC, we have incorporated and improved its rank-one feature extraction and reconstruction techniques, along with our new feature refinement modules, into the SHICEDO framework.
 
 ![Model_Overview](figure/Model_figure.png)
