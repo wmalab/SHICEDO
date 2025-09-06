@@ -1,4 +1,5 @@
 # SHICEDO: Single-cell Hi-C Resolution Enhancement with Reduced Over-smoothing
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/10.5281/zenodo.1234567)
 In this work, we introduce SHICEDO, a novel deep-learning model specifically designed for enhancing scHi-C resolution while addressing the over-smoothing issue. Built on a generative adversarial network (GAN) framework, SHICEDO's generator can process low-resolution scHi-C input of varying scales and sizes, generating an enhanced scHi-C matrix as the output. Leveraging our prior work on bulk Hi-C data, EnHiC, we have incorporated and improved its rank-one feature extraction and reconstruction techniques, along with our new feature refinement modules, into the SHICEDO framework.
 
 ![Model_Overview](figure/Model_figure.png)
@@ -73,7 +74,7 @@ After prediction, users can generate the MSE and macro F1 of low resolution and 
 If you wish to check the heatmap of low resolution, prediction, and true scHi-C, please run the following command:<br>
 `tensorboard --logdir=runs/heatmap` <br>
 
-# Demo
+## Demo
 Here we used processed Lee et al. (download from [Download processed data](https://drive.google.com/drive/folders/1EgkzPoNG-s_pi3SKOFG_YFslpIar_Bht?usp=sharing)) to demo the training, prediction and evaluation process:<br>
 `>> conda activate SHICEDO` <br>
 `> python test_train.py`<br>
@@ -81,3 +82,6 @@ Here we used processed Lee et al. (download from [Download processed data](https
 `> python test_evaluation.py`<br>
 For heatmap and loss visitation: <br>
 `tensorboard --logdir=runs/heatmap` 
+
+## Citations
+Please cite this project using the DOI: [10.5281/zenodo.1234567](https://doi.org/10.5281/zenodo.1234567)
