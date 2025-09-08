@@ -88,3 +88,6 @@ For heatmap and loss visitation: <br>
 
 ## Citations
 Please cite this project using the DOI: [10.5281/zenodo.17069264](https://doi.org/10.5281/zenodo.17069264)
+
+## License
+This project is licensed under the terms of the [MIT License](LICENSE).
