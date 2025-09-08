@@ -1,6 +1,9 @@
 # SHICEDO: Single-cell Hi-C Resolution Enhancement with Reduced Over-smoothing
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17069264.svg)](https://doi.org/10.5281/zenodo.17069264)<br>
-In this work, we introduce SHICEDO, a novel deep-learning model specifically designed for enhancing scHi-C resolution while addressing the over-smoothing issue. Built on a generative adversarial network (GAN) framework, SHICEDO's generator can process low-resolution scHi-C input of varying scales and sizes, generating an enhanced scHi-C matrix as the output. Leveraging our prior work on bulk Hi-C data, EnHiC, we have incorporated and improved its rank-one feature extraction and reconstruction techniques, along with our new feature refinement modules, into the SHICEDO framework.
+Single-cell Hi-C (scHi-C) technologies have significantly advanced our understanding of the three-dimensional genome organization. However, scHi-C data are often sparse and noisy, leading to substantial computational challenges in downstream analyses. 
+In this study, we introduce SHICEDO, a novel deep-learning model specifically designed to enhance scHi-C contact matrices \textcolor{red}{by imputing missing or sparsely captured chromatin contacts through} a generative adversarial framework. SHICEDO leverages the unique structural characteristics of scHi-C matrices \textcolor{red}{to derive customized features that enable effective data enhancement}. Additionally, the model incorporates a channel-wise attention mechanism to mitigate the over-smoothing issue commonly associated with scHi-C enhancement methods.
+Through simulations and real-data applications, we demonstrate that SHICEDO outperforms the state-of-the-art methods, achieving superior quantitative and qualitative results. 
+Moreover, SHICEDO enhances key structural features in scHi-C data, thus enabling more precise delineation of chromatin structures such as A/B compartments, TAD-like domains, and chromatin loops. 
 
 ![Model_Overview](figure/Model_figure.png)
 > *This is a citation from a [source](https://www.example.com).*
