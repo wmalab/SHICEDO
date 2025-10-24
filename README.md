@@ -7,7 +7,6 @@ Through simulations and real-data applications, we demonstrate that SHICEDO outp
 Moreover, SHICEDO enhances key structural features in scHi-C data, thus enabling more precise delineation of chromatin structures such as A/B compartments, TAD-like domains, and chromatin loops. 
 
 ![Model_Overview](figure/Model_figure.png)
-> *This is a citation from a [source](https://www.example.com).*
 - [SHICEDO](#SHICEDO:-Single-cell-Hi-C-Resolution-Enhancement-with-Reduced-Over-smoothing)
   - [Installation](#Installation)
   - [Download processed data](#Download-processed-data)
@@ -88,15 +87,12 @@ For heatmap and loss visitation: <br>
 `tensorboard --logdir=runs/heatmap` 
 
 ## Citation
-
 **Paper:**
 > Huang, J., Ma, R., Strobel, M., Hu, Y., Ye, T., Jiang, T., & Ma, W. (2025).  
 > *SHICEDO: Single-cell Hi-C Data Enhancement with Reduced Over-Smoothing.*  
 > *Bioinformatics*, btaf575.  
 > DOI: [https://doi.org/10.1093/bioinformatics/btaf575](https://doi.org/10.1093/bioinformatics/btaf575)
-
-**Code Repository:**
-> Please cite this project using the DOI:  
+**Code:**
 > [10.5281/zenodo.17069264](https://doi.org/10.5281/zenodo.17069264)
 
 ## License
