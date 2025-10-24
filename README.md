@@ -17,6 +17,8 @@ Moreover, SHICEDO enhances key structural features in scHi-C data, thus enabling
   - [Data preprocessing](#Data-preprocessing)
   - [Heatmap and loss visualization](#Heatmap-and-loss-visualization)
 - [Demo](#Demo)
+- [Citation](#Citation)
+- [License](#License)
 ## Installation
 For the environment: Install PyTorch based on the CUDA version of your machine. <br>
 Please check [PyTorch](https://pytorch.org/get-started/previous-versions/) for details<br>
@@ -88,10 +90,7 @@ For heatmap and loss visitation: <br>
 
 ## Citation
 **Paper:**
-> Huang, J., Ma, R., Strobel, M., Hu, Y., Ye, T., Jiang, T., & Ma, W. (2025).  
-> *SHICEDO: Single-cell Hi-C Data Enhancement with Reduced Over-Smoothing.*  
-> *Bioinformatics*, btaf575.  
-> DOI: [https://doi.org/10.1093/bioinformatics/btaf575](https://doi.org/10.1093/bioinformatics/btaf575)
+> Huang, J., Ma, R., Strobel, M., Hu, Y., Ye, T., Jiang, T., & Ma, W. (2025). SHICEDO: Single-cell Hi-C Data Enhancement with Reduced Over-Smoothing. Bioinformatics, btaf575. DOI: [https://doi.org/10.1093/bioinformatics/btaf575](https://doi.org/10.1093/bioinformatics/btaf575)
 **Code:**
 > [10.5281/zenodo.17069264](https://doi.org/10.5281/zenodo.17069264)
 
