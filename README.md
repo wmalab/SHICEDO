@@ -1,5 +1,7 @@
-# SHICEDO: Single-cell Hi-C Resolution Enhancement with Reduced Over-smoothing
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17069264.svg)](https://doi.org/10.5281/zenodo.17069264)<br>
+# SHICEDO: Single-cell Hi-C Data Enhancement with Reduced Over-smoothing
+[![Paper DOI](https://img.shields.io/badge/Paper-Bioinformatics%20btaf575-blue)](https://doi.org/10.1093/bioinformatics/btaf575)<br>
+[![Code DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17069264.svg)](https://doi.org/10.5281/zenodo.17069264)<br>
+## About
 Single-cell Hi-C (scHi-C) technologies have significantly advanced our understanding of the three-dimensional genome organization. However, scHi-C data are often sparse and noisy, leading to substantial computational challenges in downstream analyses.<br> 
 In this study, we introduce SHICEDO, a novel deep-learning model specifically designed to enhance scHi-C contact matrices by imputing missing or sparsely captured chromatin contacts through a generative adversarial framework. SHICEDO leverages the unique structural characteristics of scHi-C matrices to derive customized features that enable effective data enhancement}. Additionally, the model incorporates a channel-wise attention mechanism to mitigate the over-smoothing issue commonly associated with scHi-C enhancement methods.<br>
 Through simulations and real-data applications, we demonstrate that SHICEDO outperforms the state-of-the-art methods, achieving superior quantitative and qualitative results. 
@@ -86,8 +88,17 @@ Here we used processed Lee et al. (download from [Download processed data](https
 For heatmap and loss visitation: <br>
 `tensorboard --logdir=runs/heatmap` 
 
-## Citations
-Please cite this project using the DOI: [10.5281/zenodo.17069264](https://doi.org/10.5281/zenodo.17069264)
+## Citation
+
+**Paper:**
+> Huang, J., Ma, R., Strobel, M., Hu, Y., Ye, T., Jiang, T., & Ma, W. (2025).  
+> *SHICEDO: Single-cell Hi-C Data Enhancement with Reduced Over-Smoothing.*  
+> *Bioinformatics*, btaf575.  
+> DOI: [https://doi.org/10.1093/bioinformatics/btaf575](https://doi.org/10.1093/bioinformatics/btaf575)
+
+**Code Repository:**
+> Please cite this project using the DOI:  
+> [10.5281/zenodo.17069264](https://doi.org/10.5281/zenodo.17069264)
 
 ## License
 This project is licensed under the terms of the [MIT License](LICENSE).
